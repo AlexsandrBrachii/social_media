@@ -1,0 +1,171 @@
+{
+	"info": {
+		"_postman_id": "e40ecde9-7bda-4cfe-9805-fab2d4c49b6e",
+		"name": "facebook",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "signin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"ss@mail.ru\",\r\n    \"password\": \"cat123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/auth/signin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"qwerty@mail.io\",\r\n    \"firstname\": \"sergei\",\r\n    \"lastname\": \"kot\",\r\n    \"username\": \"cat\",\r\n    \"password\": \"test123\",\r\n    \"confirmPassword\": \"test123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/auth/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyIiwiZmlyc3RuYW1lIjpudWxsLCJpZCI6IjIiLCJ1c2VybmFtZSI6InNzQG1haWwucnUiLCJsYXN0bmFtZSI6bnVsbCwiaWF0IjoxNjM3NzEwMDU3LCJleHAiOjE2Mzc3MTA5NTd9.bxFBpmJM_lDfMgKzAKMTSOxrI3G_nZScreIuZSC4l32C-5GZSLiVr0sd5CCERMEKiHF6vp9-vc95Pds6i0-j5g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstname\": \"sergei\",\r\n    \"lastname\": \"salov\",\r\n    \"info\": \"programmer\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/user/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get current user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyIiwiZmlyc3RuYW1lIjpudWxsLCJpZCI6IjIiLCJ1c2VybmFtZSI6InNzQG1haWwucnUiLCJsYXN0bmFtZSI6bnVsbCwiaWF0IjoxNjM3NzEwNzI0LCJleHAiOjE2Mzc3MTE2MjR9.ohKTBTO0klqLhML3ZOzOrYcLIiG3cOnxbZHzTrBhcg1LpWt3aisC79e59uxI84x9t7VXBxtVXxGtV_73u4VZiQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/user/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get user by id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyIiwiZmlyc3RuYW1lIjpudWxsLCJpZCI6IjIiLCJ1c2VybmFtZSI6InNzQG1haWwucnUiLCJsYXN0bmFtZSI6bnVsbCwiaWF0IjoxNjM3NzEwNzI0LCJleHAiOjE2Mzc3MTE2MjR9.ohKTBTO0klqLhML3ZOzOrYcLIiG3cOnxbZHzTrBhcg1LpWt3aisC79e59uxI84x9t7VXBxtVXxGtV_73u4VZiQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/user/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
